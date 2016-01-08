@@ -1,0 +1,12 @@
+@font-face {
+    font-family: VarelaRound-Regular;
+    src: url(VarelaRound-Regular.ttf);
+}
+
+body{
+	font-family: VarelaRound-Regular;
+}
+
+.selected{
+	color: green;
+}
