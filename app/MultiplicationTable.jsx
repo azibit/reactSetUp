@@ -57,6 +57,10 @@ var MultiplicationTable = React.createClass({
     this.setState({value: event.target.value});
   },
 
+  componentDidMount(){
+      ReactDOM.findDOMNode(this.refs.nameInput).focus();
+    },
+
   render() {
    value = this.state.value;
 
@@ -77,7 +81,8 @@ var MultiplicationTable = React.createClass({
 
         <div className="center ">
           <div className="input-field ">
-            <input type="number" value={value} onChange={this.handleChange}/>
+            <input placeholder="Placeholder" type="number"
+              value={value} onChange={this.handleChange} ref="nameInput"/>
             <label for="answer">Answer</label>
           </div>
           <Link to="/" activeClassName="active">

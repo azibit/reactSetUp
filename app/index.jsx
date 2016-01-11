@@ -8,6 +8,7 @@ import ReactReflux from './ReactReflux.jsx'
 import App1 from './app.jsx'
 import Dashboard from './Dashboard.jsx'
 import Topics from './Topics.jsx'
+import Slider from './Slider.jsx'
 
 const App = React.createClass({
   render() {
@@ -26,7 +27,7 @@ const App = React.createClass({
             </ul>
           </div>
         </nav>
-        {this.props.children || <App1/>}
+        {this.props.children || <Slider/>}
       </div>
     )
   }
