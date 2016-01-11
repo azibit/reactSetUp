@@ -42,11 +42,13 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/*!**********************************!*\
-  !*** ./src/client/app/index.jsx ***!
-  \**********************************/
+/*!***********************!*\
+  !*** ./app/index.jsx ***!
+  \***********************/
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
 	'use strict';
 	
 	var _react = __webpack_require__(/*! react */ 1);
@@ -57,29 +59,33 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 159);
 	
-	var _TopicDescription = __webpack_require__(/*! ./TopicDescription.jsx */ 206);
-	
-	var _TopicDescription2 = _interopRequireDefault(_TopicDescription);
-	
-	var _Greetings = __webpack_require__(/*! ./Greetings.jsx */ 207);
+	var _Greetings = __webpack_require__(/*! ./Greetings.jsx */ 206);
 	
 	var _Greetings2 = _interopRequireDefault(_Greetings);
 	
-	var _Loader = __webpack_require__(/*! ./Loader.jsx */ 208);
+	var _Loader = __webpack_require__(/*! ./Loader.jsx */ 207);
 	
 	var _Loader2 = _interopRequireDefault(_Loader);
 	
-	var _MultiplicationTable = __webpack_require__(/*! ./MultiplicationTable.jsx */ 209);
+	var _MultiplicationTable = __webpack_require__(/*! ./MultiplicationTable.jsx */ 208);
 	
 	var _MultiplicationTable2 = _interopRequireDefault(_MultiplicationTable);
 	
-	var _ReactReflux = __webpack_require__(/*! ./ReactReflux.jsx */ 210);
+	var _ReactReflux = __webpack_require__(/*! ./ReactReflux.jsx */ 228);
 	
 	var _ReactReflux2 = _interopRequireDefault(_ReactReflux);
 	
-	var _app = __webpack_require__(/*! ./app.js */ 231);
+	var _app = __webpack_require__(/*! ./app.jsx */ 230);
 	
 	var _app2 = _interopRequireDefault(_app);
+	
+	var _Dashboard = __webpack_require__(/*! ./Dashboard.jsx */ 231);
+	
+	var _Dashboard2 = _interopRequireDefault(_Dashboard);
+	
+	var _Topics = __webpack_require__(/*! ./Topics.jsx */ 232);
+	
+	var _Topics2 = _interopRequireDefault(_Topics);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -108,7 +114,7 @@
 	              null,
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: '/dashboard', activeClassName: 'active' },
+	                { to: 'dashboard', activeClassName: 'active' },
 	                'Multiplication Table'
 	              )
 	            ),
@@ -117,7 +123,7 @@
 	              null,
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: '/form', activeClassName: 'active' },
+	                { to: 'class_topics', activeClassName: 'active' },
 	                'Class Exercises'
 	              )
 	            )
@@ -129,130 +135,19 @@
 	  }
 	});
 	
-	var TopicDescriptionWrapper = _react2.default.createClass({
-	  displayName: 'TopicDescriptionWrapper',
-	  render: function render() {
-	    return _react2.default.createElement(_TopicDescription2.default, { name: 'Fractions', body: 'I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.' });
-	  }
-	});
-	
-	var Topics = _react2.default.createClass({
-	  displayName: 'Topics',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'container row' },
-	      _react2.default.createElement(TopicDescriptionWrapper, null),
-	      _react2.default.createElement(TopicDescriptionWrapper, null),
-	      _react2.default.createElement(TopicDescriptionWrapper, null)
-	    );
-	  }
-	});
-	
-	var Dashboard = _react2.default.createClass({
-	  displayName: 'Dashboard',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'center' },
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'container row ' },
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col s3' },
-	          _react2.default.createElement(_Loader2.default, null)
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col s3' },
-	          _react2.default.createElement(_Loader2.default, null)
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col s3' },
-	          _react2.default.createElement(_Loader2.default, null)
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col s3' },
-	          _react2.default.createElement(_Loader2.default, null)
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'h4',
-	        { className: 'animated bounce' },
-	        'Choose a Multiplication Table to Continue'
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'container row  s4' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'input-field col s4 offset-s4' },
-	          _react2.default.createElement(
-	            'select',
-	            null,
-	            _react2.default.createElement(
-	              'option',
-	              { value: '1' },
-	              '2 * 1 to 2 * 12'
-	            ),
-	            _react2.default.createElement(
-	              'option',
-	              { value: '2' },
-	              '3 * 1 to 3 * 12'
-	            ),
-	            _react2.default.createElement(
-	              'option',
-	              { value: '3' },
-	              '4 * 1 to 4 * 12'
-	            ),
-	            _react2.default.createElement(
-	              'option',
-	              { value: '4' },
-	              '5 * 1 to 5 * 12'
-	            ),
-	            _react2.default.createElement(
-	              'option',
-	              { value: '5' },
-	              '6 * 1 to 6 * 12'
-	            )
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/', activeClassName: 'active' },
-	        _react2.default.createElement(
-	          'a',
-	          { className: 'waves-effect waves-light btn' },
-	          'BACK'
-	        )
-	      ),
-	      '  ',
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: 'multiplication_table', activeClassName: 'active' },
-	        _react2.default.createElement(
-	          'a',
-	          { className: 'waves-effect waves-light btn' },
-	          'CONTINUE'
-	        )
-	      )
-	    );
-	  }
-	});
-	
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
 	  { history: _reactRouter.browserHistory },
-	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: App }),
-	  _react2.default.createElement(_reactRouter.Route, { path: 'dashboard', component: Dashboard }),
-	  _react2.default.createElement(_reactRouter.Route, { path: 'form', component: Topics }),
-	  _react2.default.createElement(_reactRouter.Route, { path: 'multiplication_table', component: _MultiplicationTable2.default })
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: '/', component: App },
+	    _react2.default.createElement(_reactRouter.Route, { path: 'dashboard', component: _Dashboard2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'class_topics', component: _Topics2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'multiplication_table', component: _MultiplicationTable2.default })
+	  )
 	), document.getElementById('example'));
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 1 */
@@ -983,9 +878,9 @@
 
 /***/ },
 /* 9 */
-/*!****************************************************!*\
-  !*** ./~/react/~/fbjs/lib/ExecutionEnvironment.js ***!
-  \****************************************************/
+/*!********************************************!*\
+  !*** ./~/fbjs/lib/ExecutionEnvironment.js ***!
+  \********************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -1027,9 +922,9 @@
 
 /***/ },
 /* 10 */
-/*!*****************************************************!*\
-  !*** ./~/react/~/fbjs/lib/createNodesFromMarkup.js ***!
-  \*****************************************************/
+/*!*********************************************!*\
+  !*** ./~/fbjs/lib/createNodesFromMarkup.js ***!
+  \*********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1120,9 +1015,9 @@
 
 /***/ },
 /* 11 */
-/*!****************************************************!*\
-  !*** ./~/react/~/fbjs/lib/createArrayFromMixed.js ***!
-  \****************************************************/
+/*!********************************************!*\
+  !*** ./~/fbjs/lib/createArrayFromMixed.js ***!
+  \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1213,9 +1108,9 @@
 
 /***/ },
 /* 12 */
-/*!***************************************!*\
-  !*** ./~/react/~/fbjs/lib/toArray.js ***!
-  \***************************************/
+/*!*******************************!*\
+  !*** ./~/fbjs/lib/toArray.js ***!
+  \*******************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1279,9 +1174,9 @@
 
 /***/ },
 /* 13 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/invariant.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/invariant.js ***!
+  \*********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1338,9 +1233,9 @@
 
 /***/ },
 /* 14 */
-/*!*********************************************!*\
-  !*** ./~/react/~/fbjs/lib/getMarkupWrap.js ***!
-  \*********************************************/
+/*!*************************************!*\
+  !*** ./~/fbjs/lib/getMarkupWrap.js ***!
+  \*************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1442,9 +1337,9 @@
 
 /***/ },
 /* 15 */
-/*!*********************************************!*\
-  !*** ./~/react/~/fbjs/lib/emptyFunction.js ***!
-  \*********************************************/
+/*!*************************************!*\
+  !*** ./~/fbjs/lib/emptyFunction.js ***!
+  \*************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -1528,9 +1423,9 @@
 
 /***/ },
 /* 17 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/keyMirror.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/keyMirror.js ***!
+  \*********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2393,9 +2288,9 @@
 
 /***/ },
 /* 25 */
-/*!***************************************!*\
-  !*** ./~/react/~/fbjs/lib/warning.js ***!
-  \***************************************/
+/*!*******************************!*\
+  !*** ./~/fbjs/lib/warning.js ***!
+  \*******************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7171,9 +7066,9 @@
 
 /***/ },
 /* 58 */
-/*!*******************************************!*\
-  !*** ./~/react/~/fbjs/lib/emptyObject.js ***!
-  \*******************************************/
+/*!***********************************!*\
+  !*** ./~/fbjs/lib/emptyObject.js ***!
+  \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7200,9 +7095,9 @@
 
 /***/ },
 /* 59 */
-/*!********************************************!*\
-  !*** ./~/react/~/fbjs/lib/containsNode.js ***!
-  \********************************************/
+/*!************************************!*\
+  !*** ./~/fbjs/lib/containsNode.js ***!
+  \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7263,9 +7158,9 @@
 
 /***/ },
 /* 60 */
-/*!******************************************!*\
-  !*** ./~/react/~/fbjs/lib/isTextNode.js ***!
-  \******************************************/
+/*!**********************************!*\
+  !*** ./~/fbjs/lib/isTextNode.js ***!
+  \**********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7296,9 +7191,9 @@
 
 /***/ },
 /* 61 */
-/*!**************************************!*\
-  !*** ./~/react/~/fbjs/lib/isNode.js ***!
-  \**************************************/
+/*!******************************!*\
+  !*** ./~/fbjs/lib/isNode.js ***!
+  \******************************/
 /***/ function(module, exports) {
 
 	/**
@@ -9943,9 +9838,9 @@
 
 /***/ },
 /* 79 */
-/*!*************************************!*\
-  !*** ./~/react/~/fbjs/lib/keyOf.js ***!
-  \*************************************/
+/*!*****************************!*\
+  !*** ./~/fbjs/lib/keyOf.js ***!
+  \*****************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12230,9 +12125,9 @@
 
 /***/ },
 /* 95 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/focusNode.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/focusNode.js ***!
+  \*********************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12595,9 +12490,9 @@
 
 /***/ },
 /* 98 */
-/*!*************************************************!*\
-  !*** ./~/react/~/fbjs/lib/camelizeStyleName.js ***!
-  \*************************************************/
+/*!*****************************************!*\
+  !*** ./~/fbjs/lib/camelizeStyleName.js ***!
+  \*****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12643,9 +12538,9 @@
 
 /***/ },
 /* 99 */
-/*!****************************************!*\
-  !*** ./~/react/~/fbjs/lib/camelize.js ***!
-  \****************************************/
+/*!********************************!*\
+  !*** ./~/fbjs/lib/camelize.js ***!
+  \********************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12746,9 +12641,9 @@
 
 /***/ },
 /* 101 */
-/*!**************************************************!*\
-  !*** ./~/react/~/fbjs/lib/hyphenateStyleName.js ***!
-  \**************************************************/
+/*!******************************************!*\
+  !*** ./~/fbjs/lib/hyphenateStyleName.js ***!
+  \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12793,9 +12688,9 @@
 
 /***/ },
 /* 102 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/hyphenate.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/hyphenate.js ***!
+  \*********************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12834,9 +12729,9 @@
 
 /***/ },
 /* 103 */
-/*!*************************************************!*\
-  !*** ./~/react/~/fbjs/lib/memoizeStringOnly.js ***!
-  \*************************************************/
+/*!*****************************************!*\
+  !*** ./~/fbjs/lib/memoizeStringOnly.js ***!
+  \*****************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -15143,9 +15038,9 @@
 
 /***/ },
 /* 117 */
-/*!********************************************!*\
-  !*** ./~/react/~/fbjs/lib/shallowEqual.js ***!
-  \********************************************/
+/*!************************************!*\
+  !*** ./~/fbjs/lib/shallowEqual.js ***!
+  \************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -15420,9 +15315,9 @@
 
 /***/ },
 /* 119 */
-/*!*********************************************!*\
-  !*** ./~/react/~/fbjs/lib/EventListener.js ***!
-  \*********************************************/
+/*!*************************************!*\
+  !*** ./~/fbjs/lib/EventListener.js ***!
+  \*************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15513,9 +15408,9 @@
 
 /***/ },
 /* 120 */
-/*!**********************************************************!*\
-  !*** ./~/react/~/fbjs/lib/getUnboundedScrollPosition.js ***!
-  \**********************************************************/
+/*!**************************************************!*\
+  !*** ./~/fbjs/lib/getUnboundedScrollPosition.js ***!
+  \**************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -17235,9 +17130,9 @@
 
 /***/ },
 /* 129 */
-/*!************************************************!*\
-  !*** ./~/react/~/fbjs/lib/getActiveElement.js ***!
-  \************************************************/
+/*!****************************************!*\
+  !*** ./~/fbjs/lib/getActiveElement.js ***!
+  \****************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -17252,15 +17147,21 @@
 	 * @typechecks
 	 */
 	
+	/* eslint-disable fb-www/typeof-undefined */
+	
 	/**
 	 * Same as document.activeElement but wraps in a try-catch block. In IE it is
 	 * not safe to call document.activeElement if there is nothing focused.
 	 *
-	 * The activeElement will be null only if the document body is not yet defined.
+	 * The activeElement will be null only if the document or document body is not
+	 * yet defined.
 	 */
-	"use strict";
+	'use strict';
 	
 	function getActiveElement() /*?DOMElement*/{
+	  if (typeof document === 'undefined') {
+	    return null;
+	  }
 	  try {
 	    return document.activeElement || document.body;
 	  } catch (e) {
@@ -19219,9 +19120,9 @@
 
 /***/ },
 /* 144 */
-/*!**********************************************!*\
-  !*** ./~/react/~/fbjs/lib/performanceNow.js ***!
-  \**********************************************/
+/*!**************************************!*\
+  !*** ./~/fbjs/lib/performanceNow.js ***!
+  \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19261,9 +19162,9 @@
 
 /***/ },
 /* 145 */
-/*!*******************************************!*\
-  !*** ./~/react/~/fbjs/lib/performance.js ***!
-  \*******************************************/
+/*!***********************************!*\
+  !*** ./~/fbjs/lib/performance.js ***!
+  \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19310,7 +19211,7 @@
 	
 	'use strict';
 	
-	module.exports = '0.14.5';
+	module.exports = '0.14.6';
 
 /***/ },
 /* 147 */
@@ -20149,9 +20050,9 @@
 
 /***/ },
 /* 155 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/mapObject.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/mapObject.js ***!
+  \*********************************/
 /***/ function(module, exports) {
 
 	/**
@@ -24793,84 +24694,13 @@
 
 /***/ },
 /* 206 */
-/*!*********************************************!*\
-  !*** ./src/client/app/TopicDescription.jsx ***!
-  \*********************************************/
+/*!***************************!*\
+  !*** ./app/Greetings.jsx ***!
+  \***************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var TopicDescription = (function (_React$Component) {
-	  _inherits(TopicDescription, _React$Component);
-	
-	  function TopicDescription(props) {
-	    _classCallCheck(this, TopicDescription);
-	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(TopicDescription).call(this, props));
-	  }
-	
-	  _createClass(TopicDescription, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "" },
-	        _react2.default.createElement(
-	          "div",
-	          { className: "col s4 m4" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "card-panel white" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "card-panel green lighten-2" },
-	              _react2.default.createElement(
-	                "h3",
-	                null,
-	                this.props.name
-	              )
-	            ),
-	            _react2.default.createElement(
-	              "span",
-	              { className: "black-text" },
-	              this.props.body
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return TopicDescription;
-	})(_react2.default.Component);
-	
-	exports.default = TopicDescription;
-
-/***/ },
-/* 207 */
-/*!**************************************!*\
-  !*** ./src/client/app/Greetings.jsx ***!
-  \**************************************/
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -24953,14 +24783,18 @@
 	})(_react2.default.Component);
 	
 	exports.default = Greetings;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Greetings.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 208 */
-/*!***********************************!*\
-  !*** ./src/client/app/Loader.jsx ***!
-  \***********************************/
+/* 207 */
+/*!************************!*\
+  !*** ./app/Loader.jsx ***!
+  \************************/
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
 	'use strict';
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -25101,14 +24935,18 @@
 	})(_react2.default.Component);
 	
 	exports.default = Loader;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Loader.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 209 */
-/*!************************************************!*\
-  !*** ./src/client/app/MultiplicationTable.jsx ***!
-  \************************************************/
+/* 208 */
+/*!*************************************!*\
+  !*** ./app/MultiplicationTable.jsx ***!
+  \*************************************/
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
 	'use strict';
 	
 	var _react = __webpack_require__(/*! react */ 1);
@@ -25121,7 +24959,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var Reflux = __webpack_require__(/*! reflux */ 212);
+	var Reflux = __webpack_require__(/*! reflux */ 209);
 	
 	var person = {
 	  "name": "Dr. Blaze Hane",
@@ -25218,136 +25056,33 @@
 	});
 	
 	module.exports = MultiplicationTable;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "MultiplicationTable.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 210 */
-/*!****************************************!*\
-  !*** ./src/client/app/ReactReflux.jsx ***!
-  \****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _ImageActions = __webpack_require__(/*! ../actions/ImageActions.js */ 211);
-	
-	var _ImageActions2 = _interopRequireDefault(_ImageActions);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var ReactReflux = (function (_React$Component) {
-	  _inherits(ReactReflux, _React$Component);
-	
-	  function ReactReflux(props) {
-	    _classCallCheck(this, ReactReflux);
-	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ReactReflux).call(this, props));
-	
-	    _this.state = {
-	      presscount: 0
-	    };
-	    _this.handleClick = _this.handleClick.bind(_this);
-	    return _this;
-	  }
-	
-	  _createClass(ReactReflux, [{
-	    key: 'handleClick',
-	    value: function handleClick() {
-	      this.setState({
-	        presscount: this.state.presscount + 1
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          'Pressed ',
-	          this.state.presscount,
-	          ' times '
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'a',
-	            { className: 'waves-effect waves-light btn', onClick: this.handleClick },
-	            'Press me'
-	          ),
-	          _react2.default.createElement(
-	            'a',
-	            { className: 'waves-effect waves-light btn', onClick: _ImageActions2.default.fetchList },
-	            'Fetch new images please'
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return ReactReflux;
-	})(_react2.default.Component);
-	
-	exports.default = ReactReflux;
-
-/***/ },
-/* 211 */
-/*!********************************************!*\
-  !*** ./src/client/actions/ImageActions.js ***!
-  \********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	var Reflux = __webpack_require__(/*! reflux */ 212);
-	
-	var ImageActions = Reflux.createActions([
-	  'fetchList'
-	]);
-	
-	module.exports = ImageActions;
-
-
-/***/ },
-/* 212 */
+/* 209 */
 /*!*******************************!*\
   !*** ./~/reflux/src/index.js ***!
   \*******************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Reflux = __webpack_require__(/*! reflux-core */ 213);
+	var Reflux = __webpack_require__(/*! reflux-core */ 210);
 	
-	Reflux.connect = __webpack_require__(/*! ./connect */ 226);
+	Reflux.connect = __webpack_require__(/*! ./connect */ 223);
 	
-	Reflux.connectFilter = __webpack_require__(/*! ./connectFilter */ 228);
+	Reflux.connectFilter = __webpack_require__(/*! ./connectFilter */ 225);
 	
-	Reflux.ListenerMixin = __webpack_require__(/*! ./ListenerMixin */ 227);
+	Reflux.ListenerMixin = __webpack_require__(/*! ./ListenerMixin */ 224);
 	
-	Reflux.listenTo = __webpack_require__(/*! ./listenTo */ 229);
+	Reflux.listenTo = __webpack_require__(/*! ./listenTo */ 226);
 	
-	Reflux.listenToMany = __webpack_require__(/*! ./listenToMany */ 230);
+	Reflux.listenToMany = __webpack_require__(/*! ./listenToMany */ 227);
 	
 	module.exports = Reflux;
 
 
 /***/ },
-/* 213 */
+/* 210 */
 /*!************************************!*\
   !*** ./~/reflux-core/lib/index.js ***!
   \************************************/
@@ -25364,19 +25099,19 @@
 	    }
 	};
 	
-	Reflux.ActionMethods = __webpack_require__(/*! ./ActionMethods */ 214);
+	Reflux.ActionMethods = __webpack_require__(/*! ./ActionMethods */ 211);
 	
-	Reflux.ListenerMethods = __webpack_require__(/*! ./ListenerMethods */ 215);
+	Reflux.ListenerMethods = __webpack_require__(/*! ./ListenerMethods */ 212);
 	
-	Reflux.PublisherMethods = __webpack_require__(/*! ./PublisherMethods */ 224);
+	Reflux.PublisherMethods = __webpack_require__(/*! ./PublisherMethods */ 221);
 	
-	Reflux.StoreMethods = __webpack_require__(/*! ./StoreMethods */ 223);
+	Reflux.StoreMethods = __webpack_require__(/*! ./StoreMethods */ 220);
 	
-	Reflux.createAction = __webpack_require__(/*! ./createAction */ 225);
+	Reflux.createAction = __webpack_require__(/*! ./createAction */ 222);
 	
-	Reflux.createStore = __webpack_require__(/*! ./createStore */ 219);
+	Reflux.createStore = __webpack_require__(/*! ./createStore */ 216);
 	
-	var maker = __webpack_require__(/*! ./joins */ 218).staticJoinCreator;
+	var maker = __webpack_require__(/*! ./joins */ 215).staticJoinCreator;
 	
 	Reflux.joinTrailing = Reflux.all = maker("last"); // Reflux.all alias for backward compatibility
 	
@@ -25386,7 +25121,7 @@
 	
 	Reflux.joinConcat = maker("all");
 	
-	var _ = Reflux.utils = __webpack_require__(/*! ./utils */ 216);
+	var _ = Reflux.utils = __webpack_require__(/*! ./utils */ 213);
 	
 	Reflux.EventEmitter = _.EventEmitter;
 	
@@ -25445,7 +25180,7 @@
 	 * Provides the set of created actions and stores for introspection
 	 */
 	/*eslint-disable no-underscore-dangle*/
-	Reflux.__keep = __webpack_require__(/*! ./Keep */ 220);
+	Reflux.__keep = __webpack_require__(/*! ./Keep */ 217);
 	/*eslint-enable no-underscore-dangle*/
 	
 	/**
@@ -25459,7 +25194,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 214 */
+/* 211 */
 /*!********************************************!*\
   !*** ./~/reflux-core/lib/ActionMethods.js ***!
   \********************************************/
@@ -25474,7 +25209,7 @@
 	module.exports = {};
 
 /***/ },
-/* 215 */
+/* 212 */
 /*!**********************************************!*\
   !*** ./~/reflux-core/lib/ListenerMethods.js ***!
   \**********************************************/
@@ -25482,8 +25217,8 @@
 
 	"use strict";
 	
-	var _ = __webpack_require__(/*! ./utils */ 216),
-	    maker = __webpack_require__(/*! ./joins */ 218).instanceJoinCreator;
+	var _ = __webpack_require__(/*! ./utils */ 213),
+	    maker = __webpack_require__(/*! ./joins */ 215).instanceJoinCreator;
 	
 	/**
 	 * Extract child listenables from a parent from their
@@ -25715,7 +25450,7 @@
 	};
 
 /***/ },
-/* 216 */
+/* 213 */
 /*!************************************!*\
   !*** ./~/reflux-core/lib/utils.js ***!
   \************************************/
@@ -25777,7 +25512,7 @@
 	    return typeof value === "function";
 	}
 	
-	exports.EventEmitter = __webpack_require__(/*! eventemitter3 */ 217);
+	exports.EventEmitter = __webpack_require__(/*! eventemitter3 */ 214);
 	
 	exports.nextTick = function (callback) {
 	    setTimeout(callback, 0);
@@ -25803,7 +25538,7 @@
 	}
 
 /***/ },
-/* 217 */
+/* 214 */
 /*!**********************************!*\
   !*** ./~/eventemitter3/index.js ***!
   \**********************************/
@@ -26074,7 +25809,7 @@
 
 
 /***/ },
-/* 218 */
+/* 215 */
 /*!************************************!*\
   !*** ./~/reflux-core/lib/joins.js ***!
   \************************************/
@@ -26086,8 +25821,8 @@
 	
 	"use strict";
 	
-	var createStore = __webpack_require__(/*! ./createStore */ 219),
-	    _ = __webpack_require__(/*! ./utils */ 216);
+	var createStore = __webpack_require__(/*! ./createStore */ 216),
+	    _ = __webpack_require__(/*! ./utils */ 213);
 	
 	var slice = Array.prototype.slice,
 	    strategyMethodNames = {
@@ -26198,7 +25933,7 @@
 	}
 
 /***/ },
-/* 219 */
+/* 216 */
 /*!******************************************!*\
   !*** ./~/reflux-core/lib/createStore.js ***!
   \******************************************/
@@ -26206,10 +25941,10 @@
 
 	"use strict";
 	
-	var _ = __webpack_require__(/*! ./utils */ 216),
-	    Keep = __webpack_require__(/*! ./Keep */ 220),
-	    mixer = __webpack_require__(/*! ./mixer */ 221),
-	    bindMethods = __webpack_require__(/*! ./bindMethods */ 222);
+	var _ = __webpack_require__(/*! ./utils */ 213),
+	    Keep = __webpack_require__(/*! ./Keep */ 217),
+	    mixer = __webpack_require__(/*! ./mixer */ 218),
+	    bindMethods = __webpack_require__(/*! ./bindMethods */ 219);
 	
 	var allowed = { preEmit: 1, shouldEmit: 1 };
 	
@@ -26223,9 +25958,9 @@
 	 */
 	module.exports = function (definition) {
 	
-	    var StoreMethods = __webpack_require__(/*! ./StoreMethods */ 223),
-	        PublisherMethods = __webpack_require__(/*! ./PublisherMethods */ 224),
-	        ListenerMethods = __webpack_require__(/*! ./ListenerMethods */ 215);
+	    var StoreMethods = __webpack_require__(/*! ./StoreMethods */ 220),
+	        PublisherMethods = __webpack_require__(/*! ./PublisherMethods */ 221),
+	        ListenerMethods = __webpack_require__(/*! ./ListenerMethods */ 212);
 	
 	    definition = definition || {};
 	
@@ -26270,7 +26005,7 @@
 	};
 
 /***/ },
-/* 220 */
+/* 217 */
 /*!***********************************!*\
   !*** ./~/reflux-core/lib/Keep.js ***!
   \***********************************/
@@ -26292,7 +26027,7 @@
 	};
 
 /***/ },
-/* 221 */
+/* 218 */
 /*!************************************!*\
   !*** ./~/reflux-core/lib/mixer.js ***!
   \************************************/
@@ -26300,7 +26035,7 @@
 
 	"use strict";
 	
-	var _ = __webpack_require__(/*! ./utils */ 216);
+	var _ = __webpack_require__(/*! ./utils */ 213);
 	
 	module.exports = function mix(def) {
 	    var composed = {
@@ -26359,7 +26094,7 @@
 	};
 
 /***/ },
-/* 222 */
+/* 219 */
 /*!******************************************!*\
   !*** ./~/reflux-core/lib/bindMethods.js ***!
   \******************************************/
@@ -26392,7 +26127,7 @@
 	};
 
 /***/ },
-/* 223 */
+/* 220 */
 /*!*******************************************!*\
   !*** ./~/reflux-core/lib/StoreMethods.js ***!
   \*******************************************/
@@ -26407,7 +26142,7 @@
 	module.exports = {};
 
 /***/ },
-/* 224 */
+/* 221 */
 /*!***********************************************!*\
   !*** ./~/reflux-core/lib/PublisherMethods.js ***!
   \***********************************************/
@@ -26415,7 +26150,7 @@
 
 	"use strict";
 	
-	var _ = __webpack_require__(/*! ./utils */ 216);
+	var _ = __webpack_require__(/*! ./utils */ 213);
 	
 	/**
 	 * A module of methods for object that you want to be able to listen to.
@@ -26512,7 +26247,7 @@
 	};
 
 /***/ },
-/* 225 */
+/* 222 */
 /*!*******************************************!*\
   !*** ./~/reflux-core/lib/createAction.js ***!
   \*******************************************/
@@ -26520,10 +26255,10 @@
 
 	"use strict";
 	
-	var _ = __webpack_require__(/*! ./utils */ 216),
-	    ActionMethods = __webpack_require__(/*! ./ActionMethods */ 214),
-	    PublisherMethods = __webpack_require__(/*! ./PublisherMethods */ 224),
-	    Keep = __webpack_require__(/*! ./Keep */ 220);
+	var _ = __webpack_require__(/*! ./utils */ 213),
+	    ActionMethods = __webpack_require__(/*! ./ActionMethods */ 211),
+	    PublisherMethods = __webpack_require__(/*! ./PublisherMethods */ 221),
+	    Keep = __webpack_require__(/*! ./Keep */ 217);
 	
 	var allowed = { preEmit: 1, shouldEmit: 1 };
 	
@@ -26586,15 +26321,15 @@
 	module.exports = createAction;
 
 /***/ },
-/* 226 */
+/* 223 */
 /*!*********************************!*\
   !*** ./~/reflux/src/connect.js ***!
   \*********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var ListenerMethods = __webpack_require__(/*! reflux-core/lib/ListenerMethods */ 215),
-	    ListenerMixin = __webpack_require__(/*! ./ListenerMixin */ 227),
-	    _ = __webpack_require__(/*! reflux-core/lib/utils */ 216);
+	var ListenerMethods = __webpack_require__(/*! reflux-core/lib/ListenerMethods */ 212),
+	    ListenerMixin = __webpack_require__(/*! ./ListenerMixin */ 224),
+	    _ = __webpack_require__(/*! reflux-core/lib/utils */ 213);
 	
 	module.exports = function(listenable,key){
 	    return {
@@ -26622,14 +26357,14 @@
 
 
 /***/ },
-/* 227 */
+/* 224 */
 /*!***************************************!*\
   !*** ./~/reflux/src/ListenerMixin.js ***!
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(/*! reflux-core/lib/utils */ 216),
-	    ListenerMethods = __webpack_require__(/*! reflux-core/lib/ListenerMethods */ 215);
+	var _ = __webpack_require__(/*! reflux-core/lib/utils */ 213),
+	    ListenerMethods = __webpack_require__(/*! reflux-core/lib/ListenerMethods */ 212);
 	
 	/**
 	 * A module meant to be consumed as a mixin by a React component. Supplies the methods from
@@ -26648,15 +26383,15 @@
 
 
 /***/ },
-/* 228 */
+/* 225 */
 /*!***************************************!*\
   !*** ./~/reflux/src/connectFilter.js ***!
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var ListenerMethods = __webpack_require__(/*! reflux-core/lib/ListenerMethods */ 215),
-	    ListenerMixin = __webpack_require__(/*! ./ListenerMixin */ 227),
-	    _ = __webpack_require__(/*! reflux-core/lib/utils */ 216);
+	var ListenerMethods = __webpack_require__(/*! reflux-core/lib/ListenerMethods */ 212),
+	    ListenerMixin = __webpack_require__(/*! ./ListenerMixin */ 224),
+	    _ = __webpack_require__(/*! reflux-core/lib/utils */ 213);
 	
 	module.exports = function(listenable, key, filterFunc) {
 	    filterFunc = _.isFunction(key) ? key : filterFunc;
@@ -26697,13 +26432,13 @@
 
 
 /***/ },
-/* 229 */
+/* 226 */
 /*!**********************************!*\
   !*** ./~/reflux/src/listenTo.js ***!
   \**********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var ListenerMethods = __webpack_require__(/*! reflux-core/lib/ListenerMethods */ 215);
+	var ListenerMethods = __webpack_require__(/*! reflux-core/lib/ListenerMethods */ 212);
 	
 	/**
 	 * A mixin factory for a React component. Meant as a more convenient way of using the `ListenerMixin`,
@@ -26741,13 +26476,13 @@
 
 
 /***/ },
-/* 230 */
+/* 227 */
 /*!**************************************!*\
   !*** ./~/reflux/src/listenToMany.js ***!
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var ListenerMethods = __webpack_require__(/*! reflux-core/lib/ListenerMethods */ 215);
+	var ListenerMethods = __webpack_require__(/*! reflux-core/lib/ListenerMethods */ 212);
 	
 	/**
 	 * A mixin factory for a React component. Meant as a more convenient way of using the `listenerMixin`,
@@ -26783,16 +26518,127 @@
 
 
 /***/ },
-/* 231 */
-/*!*******************************!*\
-  !*** ./src/client/app/app.js ***!
-  \*******************************/
+/* 228 */
+/*!*****************************!*\
+  !*** ./app/ReactReflux.jsx ***!
+  \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _ImageActions = __webpack_require__(/*! ../actions/ImageActions.js */ 229);
+	
+	var _ImageActions2 = _interopRequireDefault(_ImageActions);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ReactReflux = (function (_React$Component) {
+	  _inherits(ReactReflux, _React$Component);
+	
+	  function ReactReflux(props) {
+	    _classCallCheck(this, ReactReflux);
+	
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ReactReflux).call(this, props));
+	
+	    _this.state = {
+	      presscount: 0
+	    };
+	    _this.handleClick = _this.handleClick.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(ReactReflux, [{
+	    key: 'handleClick',
+	    value: function handleClick() {
+	      this.setState({
+	        presscount: this.state.presscount + 1
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Pressed ',
+	          this.state.presscount,
+	          ' times '
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'a',
+	            { className: 'waves-effect waves-light btn', onClick: this.handleClick },
+	            'Press me'
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { className: 'waves-effect waves-light btn', onClick: _ImageActions2.default.fetchList },
+	            'Fetch new images please'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ReactReflux;
+	})(_react2.default.Component);
+	
+	exports.default = ReactReflux;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ReactReflux.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 229 */
+/*!*********************************!*\
+  !*** ./actions/ImageActions.js ***!
+  \*********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var Reflux = __webpack_require__(/*! reflux */ 209);
+	
+	var ImageActions = Reflux.createActions([
+	  'fetchList'
+	]);
+	
+	module.exports = ImageActions;
+
+
+/***/ },
+/* 230 */
+/*!*********************!*\
+  !*** ./app/app.jsx ***!
+  \*********************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
 	'use strict';
 	
 	var React = __webpack_require__(/*! react */ 1);
-	var Reflux = __webpack_require__(/*! reflux */ 212);
+	var Reflux = __webpack_require__(/*! reflux */ 209);
 	
 	var person = {
 	  "name": "Dr. Blaze Hane",
@@ -26839,6 +26685,272 @@
 	});
 	
 	module.exports = App1;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "app.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 231 */
+/*!***************************!*\
+  !*** ./app/Dashboard.jsx ***!
+  \***************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 158);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 159);
+	
+	var _Loader = __webpack_require__(/*! ./Loader.jsx */ 207);
+	
+	var _Loader2 = _interopRequireDefault(_Loader);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Dashboard = _react2.default.createClass({
+	  displayName: 'Dashboard',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'center' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'container row ' },
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col s3' },
+	          _react2.default.createElement(_Loader2.default, null)
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col s3' },
+	          _react2.default.createElement(_Loader2.default, null)
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col s3' },
+	          _react2.default.createElement(_Loader2.default, null)
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col s3' },
+	          _react2.default.createElement(_Loader2.default, null)
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'h4',
+	        { className: 'animated bounce' },
+	        'Choose a Multiplication Table to Continue'
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'container row  s4' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'input-field col s4 offset-s4' },
+	          _react2.default.createElement(
+	            'select',
+	            null,
+	            _react2.default.createElement(
+	              'option',
+	              { value: '1' },
+	              '2 * 1 to 2 * 12'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: '2' },
+	              '3 * 1 to 3 * 12'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: '3' },
+	              '4 * 1 to 4 * 12'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: '4' },
+	              '5 * 1 to 5 * 12'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: '5' },
+	              '6 * 1 to 6 * 12'
+	            )
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/', activeClassName: 'active', className: 'waves-effect waves-light btn' },
+	        'BACK'
+	      ),
+	      ' ',
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: 'multiplication_table', activeClassName: 'active', className: 'waves-effect waves-light btn' },
+	        'CONTINUE'
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = Dashboard;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Dashboard.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 232 */
+/*!************************!*\
+  !*** ./app/Topics.jsx ***!
+  \************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _TopicDescriptionWrapper = __webpack_require__(/*! ./TopicDescriptionWrapper.jsx */ 233);
+	
+	var _TopicDescriptionWrapper2 = _interopRequireDefault(_TopicDescriptionWrapper);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Topics = _react2.default.createClass({
+	  displayName: 'Topics',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'container row' },
+	      _react2.default.createElement(_TopicDescriptionWrapper2.default, null),
+	      _react2.default.createElement(_TopicDescriptionWrapper2.default, null),
+	      _react2.default.createElement(_TopicDescriptionWrapper2.default, null)
+	    );
+	  }
+	});
+	
+	module.exports = Topics;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Topics.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 233 */
+/*!*****************************************!*\
+  !*** ./app/TopicDescriptionWrapper.jsx ***!
+  \*****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _TopicDescription = __webpack_require__(/*! ./TopicDescription.jsx */ 234);
+	
+	var _TopicDescription2 = _interopRequireDefault(_TopicDescription);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var TopicDescriptionWrapper = _react2.default.createClass({
+	  displayName: 'TopicDescriptionWrapper',
+	  render: function render() {
+	    return _react2.default.createElement(_TopicDescription2.default, { name: 'Fractions', body: 'I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.' });
+	  }
+	});
+	
+	module.exports = TopicDescriptionWrapper;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TopicDescriptionWrapper.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 234 */
+/*!**********************************!*\
+  !*** ./app/TopicDescription.jsx ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	"use strict";
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var TopicDescription = (function (_React$Component) {
+	  _inherits(TopicDescription, _React$Component);
+	
+	  function TopicDescription(props) {
+	    _classCallCheck(this, TopicDescription);
+	
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(TopicDescription).call(this, props));
+	  }
+	
+	  _createClass(TopicDescription, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "col s4 m4" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "card-panel white" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "card-panel green lighten-2" },
+	              _react2.default.createElement(
+	                "h3",
+	                null,
+	                this.props.name
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "span",
+	              { className: "black-text" },
+	              this.props.body
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return TopicDescription;
+	})(_react2.default.Component);
+	
+	exports.default = TopicDescription;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TopicDescription.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }
 /******/ ]);
