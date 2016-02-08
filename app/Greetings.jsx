@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import { browserHistory, Router, Route, Link } from 'react-router'
-export default class Greetings extends React.Component {
+export default (props) => {
 
   render() {
     return (

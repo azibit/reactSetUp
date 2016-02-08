@@ -1,80 +1,46 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {render} from 'react-dom';
-import {browserHistory, Router, Route, Link} from 'react-router'
-import ReactModal from './ReactModal.jsx'
+import {browserHistory, Router, Route, Link} from 'react-router';
+import { getTimesTable } from '../actions/index';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-var Reflux = require('reflux');
-var ReactDOM = require('react-dom');
-var Modal = require('react-modal');
+class MultiplicationTable extends Component{
 
+  constructor(props){
+      super(props);
 
-var person = {
-  "name": "Dr. Blaze Hane",
-  "age": 1
-};
-
-var value = undefined;
-var actions = Reflux.createActions(["updateAge"]);
-
-var store = Reflux.createStore({
-  listenables: [actions],
-
-  onUpdateAge() {
-    console.log("Value is: " + value);
-
-    if((2 * person.age) == value){
-      console.log("Right Answer...");
-
-    }else{
-      console.log("Person.age: " + person.age);
-      console.log("Value: " + value);
-      console.log("Wrong Answer");
-    }
-
-
-    person.age = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-    value = undefined;
-    this.trigger({person, value});
-  },
-
-  getInitialState() {
-    return {person, value: undefined, modalIsOpen: false};
-  },
-
-  openModal() {
-    this.setState({modalIsOpen: true});
-  },
-
-  closeModal() {
-    this.setState({modalIsOpen: false});
+      this.state = { value: 1, term: '' };
+      this.changeState = this.changeState.bind(this);
   }
-});
 
-var MultiplicationTable = React.createClass({
+getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-  mixins: [Reflux.connect(store)],
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  },
+  changeState(event){
 
-  componentDidMount(){
-      ReactDOM.findDOMNode(this.refs.nameInput).focus();
-    },
+      event.preventDefault();
+      this.setState({ value: this.getRandomInt(1, 12) });
+      this.setState({term: ''});
+  }
+
+  onValueChange(event){
+    this.setState({ term: event.target.value });
+  }
 
   render() {
-   value = this.state.value;
-
     return (
       <div className="container center row ">
         <div className="card-panel teal lighten-2">
           <div>
-            <h1 className="animated bounce">2</h1>
+            <h1 className="animated bounce">{this.props.timeTable}</h1>
           </div>
           <div>
             <h1>*</h1>
           </div>
           <div>
-            <h1 className="animated bounce">{person.age}</h1>
+            <h1 className="animated bounce">{this.state.value}</h1>
           </div>
         </div>
         <br/>
@@ -82,20 +48,22 @@ var MultiplicationTable = React.createClass({
         <div className="center ">
           <div className="input-field ">
             <input placeholder="Placeholder" type="number"
-              value={value} onChange={this.handleChange} ref="nameInput"/>
+               value = {this.state.term} onChange = {this.onValueChange}/>
             <label for="answer">Answer</label>
           </div>
-          <Link to="/" activeClassName="active">
+          <Link to="dashboard" activeClassName="active">
             <p className="waves-effect waves-light btn">BACK</p>
           </Link>
           &nbsp;
-          <a className="waves-effect waves-light btn" onClick={actions.updateAge}>Submit</a>
+          <a className="waves-effect waves-light btn" onClick={this.changeState}>Submit</a>
         </div>
-
-
       </div>
     )
   }
-});
+}
 
-module.exports = MultiplicationTable;
+function mapStateToProps({ timeTable }){
+  return { timeTable };
+}
+
+export default connect(mapStateToProps)(MultiplicationTable);

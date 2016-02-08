@@ -1,42 +1,28 @@
-var React = require('react');
-var Reflux = require('reflux');
+import React, { Component } from 'react';
+import {browserHistory, Router, Route, Link} from 'react-router';
 
-var person = {
-  "name": "Dr. Blaze Hane",
-  "age": 30,
-  "avatar": "https://s3.amazonaws.com/uifaces/twitter/picard102/128.jpg"
-};
-
-var actions = Reflux.createActions(["updateAge"]);
-
-var store = Reflux.createStore({
-  listenables: [actions],
-
-  onUpdateAge() {
-    person.age = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-    this.trigger({person})
-  },
-
-  getInitialState() {
-    return {person};
-  }
-});
-
-var App1 = React.createClass({
-  mixins: [Reflux.connect(store)],
-
-  render() {
-    var p = this.state.person;
-    return (
-      <div className="center">
-        <br/>
-        <div className="row">
-          <div className="col s6">This div is 6-columns wide</div>
-          <div className="col s6">This div is 6-columns wide</div>
-        </div>
+export default (props) => {
+  return (
+    <div>
+      <div>
+        <nav>
+          <div className="nav-wrapper">
+            <a href="#" className="brand-logo">IFTHNK</a>
+            <ul id="nav-mobile" className="right hide-on-med-and-down">
+              <li>
+                <Link to="/" activeClassName="active">Home</Link>
+              </li>
+              <li>
+                <Link to="dashboard" activeClassName="active">Multiplication Table</Link>
+              </li>
+              <li>
+                <Link to="class_topics" activeClassName="active">Class Exercises</Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        {props.children}
       </div>
-    )
-  }
-});
-
-module.exports = App1;
+    </div>
+  );
+}

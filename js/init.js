@@ -1,4 +1,11 @@
 $(document).ready(function() {
-      $('select').material_select();
-      $('.slider').slider({full_width: false});
-    });
+
+  $('.slider').slider({
+    full_width: false
+  });
+  $('.collapsible').collapsible({
+    accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+  });
+
+
+});

@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://localhost:8080/";
+/******/ 	__webpack_require__.p = "http://localhost:8085/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -47,7 +47,7 @@
   \******************/
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(/*! webpack-dev-server/client?http://0.0.0.0:8080 */1);
+	__webpack_require__(/*! webpack-dev-server/client?http://0.0.0.0:8085 */1);
 	__webpack_require__(/*! webpack/hot/only-dev-server */74);
 	module.exports = __webpack_require__(/*! /home/azibit/react/reactSetUp/app/index.jsx */75);
 
@@ -55,7 +55,7 @@
 /***/ },
 /* 1 */
 /*!*******************************************************!*\
-  !*** (webpack)-dev-server/client?http://0.0.0.0:8080 ***!
+  !*** (webpack)-dev-server/client?http://0.0.0.0:8085 ***!
   \*******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
@@ -153,7 +153,7 @@
 		}
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, "?http://0.0.0.0:8080"))
+	/* WEBPACK VAR INJECTION */}.call(exports, "?http://0.0.0.0:8085"))
 
 /***/ },
 /* 2 */
@@ -7782,6 +7782,15 @@
 	              null,
 	              _react2.default.createElement(
 	                _reactRouter.Link,
+	                { to: '/', activeClassName: 'active' },
+	                'Home'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
 	                { to: 'dashboard', activeClassName: 'active' },
 	                'Multiplication Table'
 	              )
@@ -7798,7 +7807,7 @@
 	          )
 	        )
 	      ),
-	      this.props.children || _react2.default.createElement(_app2.default, null)
+	      this.props.children || _react2.default.createElement(_Slider2.default, null)
 	    );
 	  }
 	});
@@ -32559,6 +32568,8 @@
 	
 	    person.age = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 	    value = undefined;
+	    var $toastContent = $('<div className=/"center/">I am toast content</div>');
+	    Materialize.toast($toastContent, 5000);
 	    this.trigger({ person: person, value: value });
 	  },
 	  getInitialState: function getInitialState() {
@@ -36317,7 +36328,7 @@
 	      _react2.default.createElement(
 	        'h4',
 	        { className: 'animated bounce' },
-	        'Choos a Multiplication Table to Continue'
+	        'Choose a Multiplication Table to Continue'
 	      ),
 	      _react2.default.createElement(
 	        'div',
@@ -36547,6 +36558,10 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 233);
 	
+	var _Footer = __webpack_require__(/*! ./Footer.jsx */ 331);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36567,9 +36582,12 @@
 	  _createClass(Slider, [{
 	    key: 'render',
 	    value: function render() {
+	
+	      var ulStyle = {};
+	
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'container' },
+	        { className: '' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'slider' },
@@ -36586,12 +36604,12 @@
 	                _react2.default.createElement(
 	                  'h3',
 	                  null,
-	                  'This is our big Tagline!'
+	                  'Want to Test Your Ability on a Maths Topic!'
 	                ),
 	                _react2.default.createElement(
 	                  'h5',
 	                  { className: 'light grey-text text-lighten-3' },
-	                  'Here\'s our small slogan.'
+	                  'Here is a place for you.'
 	                )
 	              )
 	            ),
@@ -36605,12 +36623,12 @@
 	                _react2.default.createElement(
 	                  'h3',
 	                  null,
-	                  'Left Aligned Caption'
+	                  'Discover the power of Practise'
 	                ),
 	                _react2.default.createElement(
 	                  'h5',
 	                  { className: 'light grey-text text-lighten-3' },
-	                  'Here\'s our small slogan.'
+	                  'Practise Now.'
 	                )
 	              )
 	            ),
@@ -36624,12 +36642,12 @@
 	                _react2.default.createElement(
 	                  'h3',
 	                  null,
-	                  'Right Aligned Caption'
+	                  'Master the Multiplication table the African Way'
 	                ),
 	                _react2.default.createElement(
 	                  'h5',
 	                  { className: 'light grey-text text-lighten-3' },
-	                  'Here\'s our small slogan.'
+	                  'Home is Here.'
 	                )
 	              )
 	            ),
@@ -36642,18 +36660,149 @@
 	                { className: 'caption center-align' },
 	                _react2.default.createElement(
 	                  'h3',
-	                  null,
-	                  'This is our big Tagline!'
+	                  { className: 'light grey-text text-lighten-3' },
+	                  'Let Us Take You there!'
 	                ),
 	                _react2.default.createElement(
 	                  'h5',
-	                  { className: 'light grey-text text-lighten-3' },
-	                  'Here\'s our small slogan.'
+	                  { className: 'light-text text-darken-2' },
+	                  'Get Started.'
 	                )
 	              )
 	            )
 	          )
-	        )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'menu' },
+	          _react2.default.createElement(
+	            'nav',
+	            null,
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'center' },
+	              _react2.default.createElement(
+	                'ul',
+	                { id: 'nav-mobile', className: 'brand-logo center' },
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: '#!' },
+	                    'Division'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  '|'
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: '#!' },
+	                    'Addition'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  '|'
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: '#!' },
+	                    'Subtraction'
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'ul',
+	            { className: 'collapsible', 'data-collapsible': 'accordion' },
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'collapsible-header' },
+	                _react2.default.createElement(
+	                  'i',
+	                  { className: 'material-icons' },
+	                  'filter_drama'
+	                ),
+	                'Divisible by 3 trick'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'collapsible-body container' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'To determine if a number is divisible by 3, add each of the numbers. If the sum of each of the numbers is divisible by 3, then the number is divisible by 3. Example, 363 is divisible by 3 because 3 + 6 + 3 is 12 and 12 is divisible by 3'
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'collapsible-header' },
+	                _react2.default.createElement(
+	                  'i',
+	                  { className: 'material-icons' },
+	                  'place'
+	                ),
+	                'Prime Number'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'collapsible-body container' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'A Prime Number is a number which has only 2 factors; 1 and itself ONLY'
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'collapsible-header' },
+	                _react2.default.createElement(
+	                  'i',
+	                  { className: 'material-icons' },
+	                  'whatshot'
+	                ),
+	                'Third'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'collapsible-body container' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'A little bit of algebra explains this \'magic\'. Ask a friend to pick 3 consecutive numbers and to tell you a multiple of 3. Then ask them to add the four numbers and multiply by 67, and to tell you the last two digits of her answer. Now you can really amaze her by giving the whole answer and the three consecutive numbers used at the start..'
+	                )
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
 	  }]);
@@ -36664,6 +36813,154 @@
 	exports.default = Slider;
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Slider.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 331 */
+/*!************************!*\
+  !*** ./app/Footer.jsx ***!
+  \************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/azibit/react/reactSetUp/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 76);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 232);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 233);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Footer = (function (_React$Component) {
+	  _inherits(Footer, _React$Component);
+	
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+	
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Footer).apply(this, arguments));
+	  }
+	
+	  _createClass(Footer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: '' },
+	        _react2.default.createElement(
+	          'footer',
+	          { className: 'page-footer' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'row' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col l6 s12' },
+	                _react2.default.createElement(
+	                  'h5',
+	                  { className: 'white-text' },
+	                  'Essence'
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'grey-text text-lighten-4' },
+	                  'This website is an Initiative to help promote the study of mathematics among the Nigerian Youth.'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col l4 offset-l2 s12' },
+	                _react2.default.createElement(
+	                  'h5',
+	                  { className: 'white-text' },
+	                  'Links'
+	                ),
+	                _react2.default.createElement(
+	                  'ul',
+	                  null,
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'a',
+	                      { className: 'grey-text text-lighten-3', href: '#!' },
+	                      'Facebook'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'a',
+	                      { className: 'grey-text text-lighten-3', href: '#!' },
+	                      'Instagram'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'a',
+	                      { className: 'grey-text text-lighten-3', href: '#!' },
+	                      'Google+'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'a',
+	                      { className: 'grey-text text-lighten-3', href: '#!' },
+	                      'Gmail'
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'footer-copyright' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'container' },
+	              '© 2016 Azibit',
+	              _react2.default.createElement(
+	                'a',
+	                { className: 'grey-text text-lighten-4 right', href: '#!' },
+	                'More Links'
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Footer;
+	})(_react2.default.Component);
+	
+	exports.default = Footer;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/azibit/react/reactSetUp/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Footer.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }
 /******/ ]);
